@@ -1,0 +1,13 @@
+current directory: /Users/inuisouichirou/projects/hello_world/vender/bundler/ruby/2.3.0/gems/json-1.8.6/ext/json
+/Users/inuisouichirou/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20171111-67764-g3oq5g.rb extconf.rb
+creating Makefile
+
+current directory: /Users/inuisouichirou/projects/hello_world/vender/bundler/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/inuisouichirou/projects/hello_world/vender/bundler/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/inuisouichirou/projects/hello_world/vender/bundler/ruby/2.3.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" install
