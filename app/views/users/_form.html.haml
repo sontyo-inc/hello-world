@@ -1,0 +1,27 @@
+= form_for( @user, html: {class: "form-wrapper"} ) do |f|
+  %h1 New User
+  - if @user.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@user.errors.count, "error")
+        prohibited this user from being saved:
+      %ul
+        - @user.errors.full_messages.each do |message|
+          %li= message
+  .form-item
+    = f.label :email
+    %br/
+    = f.text_field :email
+  .form-item
+    = f.label :password
+    %br/
+    = f.password_field :password
+  .form-item
+    = f.label :password_confirmation
+    %br/
+    = f.password_field :password_confirmation
+  .button-panel
+    = f.submit 'Create', class: "button"
+  .form-footer
+    = link_to "アカウントを既にお持ちの方はこちら", :login
+    / <p><a href="#">Forgot password?</a></p>

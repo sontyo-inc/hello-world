@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title HelloWorld
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    / Fonts and icons
+    %link{:href => "http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css", :rel => "stylesheet"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons", :rel => "stylesheet", :type => "text/css"}/
+  %body
+    /
+      <div>
+      <p id="notice"><haml_loud> flash[:notice] </haml_loud></p>
+      <p id="alert"><haml_loud> flash[:alert] </haml_loud></p>
+      </div>
+    = yield

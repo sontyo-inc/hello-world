@@ -1,0 +1,162 @@
+.wrapper
+  .sidebar{"data-color" => "purple", "data-image" => "../assets/img/sidebar-1.jpg"}
+    /
+      Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+      
+      Tip 2: you can also add an image using data-image tag
+    .logo
+      %a.simple-text
+        sidebar
+    .sidebar-wrapper
+      %ul.nav
+        %li
+          %a{:href => "dashboard.html"}
+            %i.material-icons dashboard
+            %p Dashboard
+        %li.active
+          %a{:href => "./user.html"}
+            %i.material-icons person
+            %p User Profile
+        %li
+          %a{:href => "./table.html"}
+            %i.material-icons content_paste
+            %p Table List
+        %li
+          %a{:href => "./typography.html"}
+            %i.material-icons library_books
+            %p Typography
+        %li
+          %a{:href => "./icons.html"}
+            %i.material-icons bubble_chart
+            %p Icons
+        %li
+          %a{:href => "./maps.html"}
+            %i.material-icons location_on
+            %p Maps
+        %li
+          %a{:href => "./notifications.html"}
+            %i.material-icons.text-gray notifications
+            %p Notifications
+        %li.active-pro
+          %a{:href => "upgrade.html"}
+            %i.material-icons unarchive
+            %p Upgrade to PRO
+  .main-panel
+    %nav.navbar.navbar-transparent.navbar-absolute
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle{"data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{:href => "#"} Profile
+        .collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#pablo"}
+                %i.material-icons dashboard
+                %p.hidden-lg.hidden-md Dashboard
+            %li.dropdown
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                %i.material-icons notifications
+                / <span class="notification">5</span>
+                %p.hidden-lg.hidden-md Notifications
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"} Mike John responded to your email
+                %li
+                  %a{:href => "#"} You have 5 new tasks
+                %li
+                  %a{:href => "#"} You're now friend with Andrew
+                %li
+                  %a{:href => "#"} Another Notification
+                %li
+                  %a{:href => "#"} Another One
+            %li
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#pablo"}
+                %i.material-icons person
+                %p.hidden-lg.hidden-md Profile
+                = link_to 'Edit', edit_user_path(@user)
+                |
+                \#{link_to "Logout", :logout, method: :post}
+          %form.navbar-form.navbar-right{:role => "search"}
+            .form-group.is-empty
+              %input.form-control{:placeholder => "Search", :type => "text"}/
+              %span.material-input
+            %button.btn.btn-white.btn-round.btn-just-icon{:type => "submit"}
+              %i.material-icons search
+              .ripple-container
+    .content
+      .container-fluid
+        .row
+          .col-md-8
+            .card
+              .card-header{"data-background-color" => "purple"}
+                %h4.title Edit Profile
+                %p.category Complete your profile
+              .card-content
+                %form
+                  .row
+                    .col-md-5
+                      .form-group.label-floating
+                        %label.control-label Company (disabled)
+                        %input.form-control{:disabled => "disabled", :type => "text"}/
+                    .col-md-3
+                      .form-group.label-floating
+                        %label.control-label Username
+                        %input.form-control{:type => "text"}/
+                    .col-md-4
+                      .form-group.label-floating
+                        %label.control-label Email address
+                        %input.form-control{:type => "email"}/
+                  .row
+                    .col-md-6
+                      .form-group.label-floating
+                        %label.control-label Fist Name
+                        %input.form-control{:type => "text"}/
+                    .col-md-6
+                      .form-group.label-floating
+                        %label.control-label Last Name
+                        %input.form-control{:type => "text"}/
+                  .row
+                    .col-md-12
+                      .form-group.label-floating
+                        %label.control-label Adress
+                        %input.form-control{:type => "text"}/
+                  .row
+                    .col-md-4
+                      .form-group.label-floating
+                        %label.control-label City
+                        %input.form-control{:type => "text"}/
+                    .col-md-4
+                      .form-group.label-floating
+                        %label.control-label Country
+                        %input.form-control{:type => "text"}/
+                    .col-md-4
+                      .form-group.label-floating
+                        %label.control-label Postal Code
+                        %input.form-control{:type => "text"}/
+                  .row
+                    .col-md-12
+                      .form-group
+                        %label About Me
+                        .form-group.label-floating
+                          %label.control-label
+                            = link_to 'Edit', edit_user_path(@user)
+                            |
+                            \#{link_to 'Back', users_path}
+                          %textarea.form-control{:rows => "5"}
+                  %button.btn.btn-primary.pull-right{:type => "submit"} Update Profile
+                  .clearfix
+          .col-md-4
+            .card.card-profile
+              .card-avatar
+                %a{:href => "#pablo"}
+                  %img.img{:src => "../assets/img/faces/marc.jpg"}/
+              .content
+                %h6.category.text-gray CEO / Co-Founder
+                %h4.card-title Alec Thompson
+                %p.card-content
+                  Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                %a.btn.btn-primary.btn-round{:href => "#pablo"} Follow
