@@ -1,0 +1,16 @@
+= form_tag user_sessions_path, class: "form-wrapper", :method => :post do
+  %h1 Login
+  .form-item
+    \&gt;
+    \#{label_tag :email}
+    %br/
+    = text_field_tag :email
+  .form-item
+    = label_tag :password
+    %br/
+    = password_field_tag :password
+  .button-panel.button
+    = submit_tag "Login", :class => "button"
+  .form-footer
+    = link_to "新規登録の方はこちら", new_user_path
+    / <p><a href="#">Forgot password?</a></p>
